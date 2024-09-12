@@ -59,4 +59,5 @@ div p {
   font-size: 1.1rem;
   color: hsl(216, 15%, 48%);
   padding-inline: 0.6rem;
+  padding-block-end: 1.5rem;
 }
