@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+html {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(30, 38%, 92%);
+}
+
+section {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  max-width: 30rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 1.5rem;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  color: hsl(228, 12%, 48%);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 1.8rem + 1vw, 4rem);
+  color: hsl(212, 21%, 14%);
+  margin-block: 1.2rem;
+}
+
+p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.7;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin-block: 1rem;
+}
+
+.pricing__discount {
+  font-size: clamp(2.2rem, 1.8rem + 1vw, 4rem);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.pricing__real {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:hsl(157, 48%, 25%);
+}
+
+@media screen and (width >= 50rem ){
+  section {
+    max-width: 46rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  section > *{
+    flex: 1 1 100%;
+  }
+
+  h1 {
+    margin-block: 1.5rem;
+  }
+
+  .pricing {
+    margin-block: 1.5rem;
+  }
+}
