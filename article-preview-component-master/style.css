@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+button {
+    border: none;
+    inline-size: 2.2rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    width: 85%;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 4px 16px 16px hsla(0, 0%, 31%, 0.1);
+}
+
+section > img {
+    flex: 1 1 auto;
+    height: 13.5rem;
+    object-fit: cover;
+}
+
+h1, .profile .name span:first-child {
+    color: hsl(217, 19%, 35%);
+}
+
+p, .profile .name span:last-child {
+    color: hsl(214, 17%, 51%);
+}
+
+h1 {
+    font-size: clamp(1.25rem, 1rem + 0.5vw, 2rem);
+    margin-block-start: 1.5rem;
+}
+
+p {
+    line-height: 1.5;
+    margin-block: 1.2rem 2rem;
+}
+
+.container {
+    padding: 1.3rem 2.4rem; 
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile .name span:first-child {
+    font-weight: 700;
+}
+
+.profile img {
+    inline-size: 2.5rem;
+    block-size: auto;
+    border-radius: 100%;
+}
+
+.profile svg {
+    fill: #6E8098;
+}
+
+.profile button {
+    background-color: hsl(210, 46%, 95%);
+}
+
+.profile button:hover {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.profile button:hover svg {
+    fill: hsl(0, 0%, 100%) ;
+}
+
+.socials {
+    color: hsl(214, 17%, 51%);
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    display: none;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+    bottom: 0;
+    left: 0;
+    padding-inline: 2.4rem;
+}
+
+.socials span {
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+}
+
+.socials button {
+    margin-left: auto;
+}
+
+.socials button svg {
+    fill: hsl(0, 0%, 100%);
+}
+
+.socials button {
+    background-color: hsl(214, 17%, 51%);
+}
+
+.socials button:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.socials button:hover svg {
+    fill: hsl(217, 19%, 35%);
+}
+
+@media screen and (min-width: 760px) {
+    section {
+        flex-direction: row;
+        max-width: 55.5rem;
+        overflow:visible;
+    }
+
+    .container {
+        padding-block-end: 2rem;
+    }
+
+    section > img {
+        height: auto;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 0.7rem 0 0 0.7rem;
+    }
+
+    .socials {
+        justify-content: space-between;
+        padding-inline: 3rem;
+        border-radius: 1rem;
+        width: 250px;
+        height: 3.8rem;
+        bottom: 7rem;
+        left: unset;
+        gap: unset;
+        right: -6rem;
+    }
+
+    .socials button {
+        display: none;
+    }
+
+    .socials::after {
+        content: " ";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 20px;
+        transform: translateX(-50%) rotate(45deg);
+        aspect-ratio: 1;
+        background-color: hsl(217, 19%, 35%);
+    }
+}
